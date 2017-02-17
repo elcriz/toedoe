@@ -1,0 +1,12 @@
+.todos-list {
+	padding: 0;
+}
+
+.todos-list__item {
+	padding: 5px;
+	margin: 4px 0;
+	list-style-type: none;
+	background-color: $color-white;
+	border-radius: $border-radius-80;
+	box-shadow: 0px 0px 2px $color-grey-20;
+}
