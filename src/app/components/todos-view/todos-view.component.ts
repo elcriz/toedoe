@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { StateInterface } from '../../store/state.interface';
-import { Todo, EditTodo } from '../../store/todos/todos.interface';
+import { TodosInterface as Todos, EditTodo } from '../../store/todos/todos.interface';
 import { TodosService } from '../../services/todos/todos.service';
 
 @Component({
 	template: `
 	<div>
 		<todo-form
+			[todos]="todos | async"
 			(onAdd)="doAddTodo($event)"
 			(onToggleAll)="doToggleAllTodos()"
-			(onDeleteAll="doDeleteAllTodos()">
+			(onDeleteAll)="doDeleteAllTodos()">
 		</todo-form>
 		<todos-list
 			[todos]="todos | async"
@@ -25,7 +26,7 @@ import { TodosService } from '../../services/todos/todos.service';
 
 export class TodosViewComponent {
 
-	todos: Observable<Array<Todo>>;
+	todos: Observable<Todos>;
 
 	constructor(
 		private todosService: TodosService,

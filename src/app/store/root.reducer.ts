@@ -9,9 +9,9 @@ export const rootReducer = (state, action: Action) => {
 
 		// Logs state changes to console if environment is not build
 		if (process.env.ENV !== 'build') {
-			console.info('prev state: ', state);
+			console.info('PREV state: ', state);
 			console.info(action.type, action.payload);
-			console.info('next state: ', reduced);
+			console.info('NEXT state: ', reduced);
 		}
 
 		return reduced;

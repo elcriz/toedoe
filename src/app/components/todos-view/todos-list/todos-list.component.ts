@@ -5,9 +5,9 @@ import { Todo, EditTodo } from '../../../store/todos/todos.interface';
 	selector: 'todos-list',
 	template: `
 	<ul>
-		<li *ngFor="let item of todos">
+		<li *ngFor="let item of todos.items">
 			<todo
-				[item]="item""
+				[item]="item"
 				(onEdit)="onEdit.emit($event)"
 				(onToggle)="onToggle.emit($event)"
 				(onDelete)="onDelete.emit($event)">

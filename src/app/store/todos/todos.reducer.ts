@@ -11,13 +11,13 @@ export const todos: ActionReducer<any> = (state: Todos = initialTodosState, acti
 
 		case Actions.TODOS_ADD_TODO:
 			return {
-				items: [...state.items, ...[{
+				...state,
+				items: [...state.items, {
 					id: state.items
 						.reduce((maxId, item) => Math.max(item.id, maxId), -1) + 1,
 					text: action.payload,
 					isCompleted: false
-				}]],
-				...state
+				}]
 			};
 
 		case Actions.TODOS_EDIT_TODO:
@@ -58,6 +58,11 @@ export const todos: ActionReducer<any> = (state: Todos = initialTodosState, acti
 			};
 
 		case Actions.TODOS_DELETE_ALL_TODOS:
+			return {
+				...state,
+				items: []
+			};
+
 		default:
 			return state;
 	}

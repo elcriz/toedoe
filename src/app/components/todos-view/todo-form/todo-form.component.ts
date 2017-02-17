@@ -1,14 +1,14 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Todo } from '../../../store/todos/todos.interface';
 
 @Component({
 	selector: 'todo-form',
 	template: `
 	<form (ngSubmit)="submit()">
-		<input name="text"
-			[(ngModel)]="text">
-		<button type="submit"">Add todo</button>
+		<input name="text" [(ngModel)]="text">
+		<button type="submit">Add todo</button>
 	</form>
-	<div>
+	<div *ngIf="todos.items.length">
 		<button type="button"
 			(click)="onTogglelAll.emit($event)">Toggle all todos
 		</button>
@@ -21,6 +21,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 export class TodoFormComponent {
 
+	@Input() todos: Array<Todo>;
 	@Output() onAdd: EventEmitter<string> = new EventEmitter();
 	@Output() onToggleAll: EventEmitter<any> = new EventEmitter();
 	@Output() onDeleteAll: EventEmitter<any> = new EventEmitter();

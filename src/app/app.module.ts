@@ -1,7 +1,7 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 
 import { TodosService } from './services/todos/todos.service';
@@ -26,6 +26,7 @@ import '../scss/main.scss';
 		BrowserModule,
 		HttpModule,
 		FormsModule,
+		ReactiveFormsModule,
 		routing,
 		StoreModule.provideStore(
 			rootReducer, InitialState

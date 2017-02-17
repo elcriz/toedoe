@@ -3,6 +3,10 @@ import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Todo, EditTodo } from '../../../../store/todos/todos.interface';
 
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/switchMap';
+
 @Component({
 	selector: 'todo',
 	template: `
@@ -12,7 +16,8 @@ import { Todo, EditTodo } from '../../../../store/todos/todos.interface';
 			[formControl]="text"
 			type="text"
 			value="{{ item.text }}">
-		<button type="button">
+		<button type="button"
+			(click)="onToggle.emit(item.id)">
 			<template [ngIf]="!item.isCompleted">Complete</template>
 			<template [ngIf]="item.isCompleted">Uncomplete</template>
 		</button>
