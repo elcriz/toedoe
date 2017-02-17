@@ -10,7 +10,7 @@ import { Todo } from '../../../store/todos/todos.interface';
 	</form>
 	<div *ngIf="todos.items.length">
 		<button type="button"
-			(click)="onTogglelAll.emit($event)">Toggle all todos
+			(click)="onToggleAll.emit($event)">Toggle all todos
 		</button>
 		<button type="button"
 			(click)="onDeleteAll.emit($event)">Delete all todos
@@ -28,6 +28,10 @@ export class TodoFormComponent {
 
 	text: string;
 
+	/**
+	 * Emit submit event and clear input.
+	 * @return {void}
+	 */
 	submit(): void {
 		if (!this.text) {
 			return;
