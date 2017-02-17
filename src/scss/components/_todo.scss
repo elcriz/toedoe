@@ -1,0 +1,23 @@
+.todo {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	width: 100%;
+}
+
+.todo__text-input {
+	border: none;
+	background: none;
+
+	&:focus,
+	.is-completed &:focus {
+		text-decoration: none;
+	}
+
+	.is-completed & {
+		text-decoration: line-through;
+	}
+}
+
+.todo__actions {
+	 //
+}

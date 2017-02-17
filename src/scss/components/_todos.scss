@@ -1,0 +1,18 @@
+.todos {
+
+	@include media(0, $range-hand) {
+		margin: 20px;
+	}
+
+	@include media($range-lap, false) {
+		max-width: 681px;
+		margin: 10% auto;
+	}
+}
+
+.todos__header {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	width: 100%;
+	margin-bottom: 20px;
+}
