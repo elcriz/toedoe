@@ -4,8 +4,9 @@ import { Todo, EditTodo } from '../../../store/todos/todos.interface';
 @Component({
 	selector: 'todos-list',
 	template: `
-	<ul>
-		<li *ngFor="let item of todos.items">
+	<ul class="todos-list">
+		<li	class="todos-list__item"
+			*ngFor="let item of todos.items">
 			<todo
 				[item]="item"
 				(onEdit)="onEdit.emit($event)"

@@ -7,20 +7,18 @@ import { TodosService } from '../../services/todos/todos.service';
 
 @Component({
 	template: `
-	<div>
-		<todo-form
-			[todos]="todos | async"
-			(onAdd)="doAddTodo($event)"
-			(onToggleAll)="doToggleAllTodos()"
-			(onDeleteAll)="doDeleteAllTodos()">
-		</todo-form>
-		<todos-list
-			[todos]="todos | async"
-			(onToggle)="doToggleTodo($event)"
-			(onDelete)="doDeleteTodo($event)"
-			(onEdit)="doEditTodo($event)">
-		</todos-list>
-	</div>
+	<todo-form
+		[todos]="todos | async"
+		(onAdd)="doAddTodo($event)"
+		(onToggleAll)="doToggleAllTodos()"
+		(onDeleteAll)="doDeleteAllTodos()">
+	</todo-form>
+	<todos-list
+		[todos]="todos | async"
+		(onToggle)="doToggleTodo($event)"
+		(onDelete)="doDeleteTodo($event)"
+		(onEdit)="doEditTodo($event)">
+	</todos-list>
 	`
 })
 

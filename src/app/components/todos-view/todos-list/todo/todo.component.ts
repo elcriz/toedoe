@@ -10,20 +10,25 @@ import 'rxjs/add/operator/switchMap';
 @Component({
 	selector: 'todo',
 	template: `
-	<div [ngClass]="{ 'is-completed': item.isCompleted }">
-		<input
+	<div class="todo"
+		[ngClass]="{ 'is-completed': item.isCompleted }">
+		<input class="todo__text-input"
 			#todoText
 			[formControl]="text"
 			type="text"
 			value="{{ item.text }}">
-		<button type="button"
-			(click)="onToggle.emit(item.id)">
-			<template [ngIf]="!item.isCompleted">Complete</template>
-			<template [ngIf]="item.isCompleted">Uncomplete</template>
-		</button>
-		<button type="button"
-			(click)="onDelete.emit(item.id)">Delete
-		</button>
+		<div class="todo__actions">
+			<button class="todo__toggle-button"
+				type="button"
+				(click)="onToggle.emit(item.id)">
+				<template [ngIf]="!item.isCompleted">Complete</template>
+				<template [ngIf]="item.isCompleted">Uncomplete</template>
+			</button>
+			<button class="todo__delete-button"
+				type="button"
+				(click)="onDelete.emit(item.id)">Delete
+			</button>
+		</div>
 	</div>
 	`
 })
@@ -45,7 +50,7 @@ export class TodoComponent implements OnInit {
 	ngOnInit(): void {
 		const { id } = this.item;
 		this.editSubscriber = this.text.valueChanges
-			.debounceTime(400)
+			.debounceTime(500)
 			.distinctUntilChanged()
 			.subscribe(value =>
 				this.onEdit.emit({ id, text: value }));
