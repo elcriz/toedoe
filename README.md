@@ -1,6 +1,6 @@
 # ToeDoe
 
-A simple todo application in Angular, using @ngrx/store. This application can be used as a project boilerplate as well.
+A simple todo application in Angular (2.x), implementing the Flux/Redux state management pattern using @ngrx/store. This application can be used as a project boilerplate as well.
 
 # Development
 
@@ -11,6 +11,9 @@ First, clone (or download) the repo. Then, install dependencies and start the se
 ```bash
 # Install the dependencies with npm
 $ npm install
+
+# Or do a clean install
+$ npm run clean-install
 
 # Start the server
 $ npm start

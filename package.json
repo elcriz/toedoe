@@ -1,6 +1,7 @@
 {
   "name": "toedoe",
   "version": "0.0.0",
+  "author": "Christiaan Hemerik",
   "repository": {
     "type": "git",
     "url": "https://github.com/elcriz/toedoe.git"
