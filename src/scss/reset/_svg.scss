@@ -1,0 +1,25 @@
+// NOTE: The properties you want to change of the symbols in the icons.svg need
+// to beset to inherit, so they can be styled using normal css.
+// see: https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
+
+svg {
+	#arrow-back path,
+	#arrow-forward path {
+		// stroke: inherit;
+	}
+
+	#close-icon g,
+	#row-icon path,
+	#check-icon polyline {
+		stroke: inherit;
+	}
+
+	#menu-icon path,
+	#search-icon path,
+	#username-icon path,
+	#calendar-icon g,
+	#minus-icon rect,
+	#plus-icon path {
+		fill: inherit;
+	}
+}
