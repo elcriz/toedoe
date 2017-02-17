@@ -1,6 +1,6 @@
 # ToeDoe
 
-A simple to-do application in Angular, using @ngrx/store. This application can be used as a project boilerplate as well.
+A simple todo application in Angular, using @ngrx/store. This application can be used as a project boilerplate as well.
 
 # Development
 
