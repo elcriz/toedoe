@@ -1,0 +1,45 @@
+// ## Descriptive Colors
+$color-black: rgb(0, 0, 0);
+$color-grey-75: rgb(150, 150, 150);
+$color-grey-10: rgb(250, 250, 250);
+$color-white: rgb(255, 255, 255);
+$color-blue: rgb(0, 122, 204);
+$color-green: rgb(0, 204, 122);
+$color-yellow: rgb(255, 191, 66);
+$color-red: rgb(200, 0, 0);
+
+// ## User Interface
+$color-ui: $color-grey-75;
+$color-ui-accent: $color-blue;
+$color-light: $color-grey-10;
+$color-dark: $color-black;
+
+// ## Typography
+$color-heading: $color-blue;
+$color-subheading: $color-grey-75 - 50;
+$color-text: $color-grey-75;
+
+// ## Hierarchical
+$color-cta: $color-yellow;
+$color-primary: $color-blue;
+$color-secondary: $color-green;
+
+// ## States
+$color-error: $color-red;
+$color-success: $color-green;
+$color-warning: $color-yellow;
+$color-info: $color-blue;
+$color-select: $color-green;
+$color-focus: $color-blue;
+
+// ## Additional Colors
+$color-shadow: $color-dark;
+$color-site-background: $color-light;
+$color-input-background: $color-light;
+$color-input-border: $color-ui;
+
+// ## Ranges
+$color-ui-40: tint($color-ui, 60%);
+$color-ui-90: tint($color-ui, 10%);
+$color-ui-300: shade($color-ui, 60%);
+$color-ui-500: shade($color-ui, 40%);
