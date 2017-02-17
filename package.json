@@ -1,6 +1,10 @@
 {
   "name": "toedoe",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elcriz/toedoe.git"
+  },
   "license": "MIT",
   "scripts": {
     "clean": "rimraf node_modules doc dist && npm cache clean",
@@ -86,7 +90,7 @@
     "tslint": "^4.3.1",
     "tslint-loader": "^3.3.0",
     "typedoc": "^0.5.1",
-    "typescript": "2.0.10",
+    "typescript": "2.1.4",
     "url-loader": "^0.5.6",
     "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.9"
