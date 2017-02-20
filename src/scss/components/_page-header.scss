@@ -1,0 +1,6 @@
+.page__header {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	width: 100%;
+	margin-bottom: 20px;
+}
