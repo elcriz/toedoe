@@ -50,12 +50,18 @@ export const todos: ActionReducer<any> = (state: Todos = initialTodosState, acti
 					)
 			};
 
-		case Actions.TODOS_TOGGLE_ALL_TODOS:
+		case Actions.TODOS_TOGGLE_ALL_TODOS: {
+			const itemsCompleted = state.items
+				.reduce((sum, item) => (sum += item.isCompleted ? 1 : 0), 0);
 			return {
 				...state,
 				items: state.items
-					.map(item => ({ ...item, isCompleted: !item.isCompleted }))
+					.map(item => ({
+						...item,
+						isCompleted: itemsCompleted < state.items.length
+					}))
 			};
+		}
 
 		case Actions.TODOS_DELETE_ALL_TODOS:
 			return {
