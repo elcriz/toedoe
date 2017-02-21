@@ -18,13 +18,13 @@ import 'rxjs/add/operator/switchMap';
 			type="text"
 			value="{{ item.text }}">
 		<div class="todo__actions">
-			<button class="todo__toggle-button"
+			<button class="todo__toggle-button button"
 				type="button"
 				(click)="onToggle.emit(item.id)">
 				<template [ngIf]="!item.isCompleted">Complete</template>
 				<template [ngIf]="item.isCompleted">Uncomplete</template>
 			</button>
-			<button class="todo__delete-button"
+			<button class="todo__delete-button button"
 				type="button"
 				(click)="onDelete.emit(item.id)">Delete
 			</button>
