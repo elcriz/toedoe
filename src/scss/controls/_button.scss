@@ -1,0 +1,7 @@
+.button {
+	@include appearance(none);
+	padding: 3px 10px;
+	border: none;
+	background-color: $color-grey-20;
+	font-size: $font-size-80;
+}
