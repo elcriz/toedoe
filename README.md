@@ -1,6 +1,6 @@
 # ToeDoe
 
-A simple todo application in Angular (2.x), implementing the Flux/Redux state management pattern using @ngrx/store. This application can be used as a project boilerplate as well.
+A simple todo application in Angular (2.x), implementing the Flux/Redux state management pattern using @ngrx/store. This application can be used as a project boilerplate as well. It contains all we usually need to develop a single page app at Aan Zee.
 
 # Development
 
@@ -21,6 +21,7 @@ $ npm start
 # Or start the server using HMR
 $ npm run start:hmr
 ```
+
 Go to [http://0.0.0.0:8080](http://0.0.0.0:8080) in your browser.
 
 ### Testing

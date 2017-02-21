@@ -1,0 +1,12 @@
+<form (ngSubmit)="submit()">
+	<input name="text" [(ngModel)]="text">
+	<button class="button" type="submit">Add todo</button>
+</form>
+<div *ngIf="todos.items.length">
+	<button class="button" type="button" [attr.test-id]="'toggle-all-button'"
+		(click)="onToggleAll.emit($event)">Toggle all todos
+	</button>
+	<button class="button" type="button" [attr.test-id]="'delete-all-button'"
+		(click)="onDeleteAll.emit($event)">Delete all todos
+	</button>
+</div>
