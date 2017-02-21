@@ -1,6 +1,7 @@
 .todo {
 	@include display(flex);
-	@include flex-wrap(wrap);
+	@include align-items(flex-end);
+	white-space: nowrap;
 	width: 100%;
 }
 

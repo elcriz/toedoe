@@ -6,13 +6,13 @@ import { Todo } from '../../../store/todos/todos.interface';
 	template: `
 	<form (ngSubmit)="submit()">
 		<input name="text" [(ngModel)]="text">
-		<button type="submit">Add todo</button>
+		<button class="button" type="submit">Add todo</button>
 	</form>
 	<div *ngIf="todos.items.length">
-		<button type="button"
+		<button class="button" type="button"
 			(click)="onToggleAll.emit($event)">Toggle all todos
 		</button>
-		<button type="button"
+		<button class="button" type="button"
 			(click)="onDeleteAll.emit($event)">Delete all todos
 		</button>
 	</div>
