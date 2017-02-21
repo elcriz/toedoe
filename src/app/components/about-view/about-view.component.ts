@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-	template: `
-		<h1>About</h1>
-	`
+	templateUrl: 'about-view.component.html'
 })
 
 export class AboutViewComponent {}
