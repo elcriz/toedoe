@@ -9,28 +9,7 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
 	selector: 'todo',
-	template: `
-	<div class="todo"
-		[ngClass]="{ 'is-completed': item.isCompleted }">
-		<input class="todo__text-input"
-			#todoText
-			[formControl]="text"
-			type="text"
-			value="{{ item.text }}">
-		<div class="todo__actions">
-			<button class="todo__toggle-button button"
-				type="button"
-				(click)="onToggle.emit(item.id)">
-				<template [ngIf]="!item.isCompleted">Complete</template>
-				<template [ngIf]="item.isCompleted">Uncomplete</template>
-			</button>
-			<button class="todo__delete-button button"
-				type="button"
-				(click)="onDelete.emit(item.id)">Delete
-			</button>
-		</div>
-	</div>
-	`
+	templateUrl: 'todo.component.html'
 })
 
 export class TodoComponent implements OnInit {
@@ -50,7 +29,7 @@ export class TodoComponent implements OnInit {
 	ngOnInit(): void {
 		const { id } = this.item;
 		this.editSubscriber = this.text.valueChanges
-			.debounceTime(500)
+			.debounceTime(750)
 			.distinctUntilChanged()
 			.subscribe(value =>
 				this.onEdit.emit({ id, text: value }));
