@@ -6,20 +6,7 @@ import { TodosInterface as Todos, EditTodo } from '../../store/todos/todos.inter
 import { TodosService } from '../../services/todos/todos.service';
 
 @Component({
-	template: `
-	<todo-form
-		[todos]="todos | async"
-		(onAdd)="doAddTodo($event)"
-		(onToggleAll)="doToggleAllTodos()"
-		(onDeleteAll)="doDeleteAllTodos()">
-	</todo-form>
-	<todos-list
-		[todos]="todos | async"
-		(onToggle)="doToggleTodo($event)"
-		(onDelete)="doDeleteTodo($event)"
-		(onEdit)="doEditTodo($event)">
-	</todos-list>
-	`
+	templateUrl: 'todos-view.component.html'
 })
 
 export class TodosViewComponent {

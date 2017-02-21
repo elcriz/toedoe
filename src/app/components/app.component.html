@@ -1,0 +1,12 @@
+<header class="page-header" [attr.test-id]="'page-header'">
+	<div class="page-header__inner">
+		<h1 class="page-header__heading" [attr.test-id]="'page-header-heading'">ToeDoe</h1>
+		<div class="page-header__nav">
+			<a class="page-header__nav-item" [routerLink]="['/']">Todos</a>
+			<a class="page-header__nav-item" [routerLink]="['/about']">About</a>
+		</div>
+	</div>
+</header>
+<main>
+	<router-outlet></router-outlet>
+</main>
