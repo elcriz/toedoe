@@ -12,12 +12,12 @@ export const todos: ActionReducer<any> = (state: Todos = initialTodosState, acti
 		case Actions.TODOS_ADD_TODO:
 			return {
 				...state,
-				items: [...state.items, {
+				items: [{
 					id: state.items
 						.reduce((maxId, item) => Math.max(item.id, maxId), -1) + 1,
 					text: action.payload,
 					isCompleted: false
-				}]
+				}, ...state.items]
 			};
 
 		case Actions.TODOS_EDIT_TODO:
