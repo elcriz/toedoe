@@ -1,6 +1,24 @@
-.page__header {
+.page-header {
 	@include display(flex);
 	@include flex-wrap(wrap);
 	width: 100%;
 	margin-bottom: 20px;
+	color: $color-white;
+	background-color: $color-blue;
+}
+
+.page-header__inner {
+	padding: 20px;
+}
+
+.page-header__heading {
+	//
+}
+
+.page-header__nav {
+	//
+}
+
+.page-header__nav-item {
+	color: $color-white;
 }
